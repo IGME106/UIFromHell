@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UIFromHell
 {
-    public partial class Frm1 : Form
+    public partial class Frm3 : Form
     {
-        public Frm1()
+        public Frm3()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
