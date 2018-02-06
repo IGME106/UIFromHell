@@ -15,10 +15,10 @@ namespace UIFromHell
 {
     public partial class Form2 : Form
     {
-        Random random = new Random();
+        Random random = new Random();                               // Instantiate random number generator
 
         private int encryptionShiftBy = 0;
-        private string encryptionShiftDirection = "right";
+        private string encryptionShiftDirection = "right";          // Set encryption direction
 
         private string clearName = string.Empty;
 
@@ -29,17 +29,26 @@ namespace UIFromHell
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Takes input from the textbox
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void Form2ClearNameTxtB_KeyDown(object sender, KeyEventArgs e)
         {
             encryptionShiftBy = random.Next(0, 26);
             clearName = Form2PlainNameTxtB.Text;
             
-            if (e.KeyCode == Keys.Return)
+            if (e.KeyCode == Keys.Return)       // Test if "Enter" was pressed and only act if yes
             {
-                EncryptString();                
+                EncryptString();                // Encrypt the supplied string
             }
         }
 
+        /// <summary>
+        /// Helper method that requests the encrypted string and calls the update
+        /// to screen
+        /// </summary>
         private void EncryptString()
         {
             encryptedName = Cryptograph("encipher", clearName, encryptionShiftBy);
@@ -47,29 +56,38 @@ namespace UIFromHell
             UpdateDisplaySecondPhase();
         }
 
-        private void DecryptString()
-        {
-
-        }
-
+        /// <summary>
+        /// Defines the encryption/decryption algorithm
+        /// </summary>
+        /// <param name="direction">Define if we want to "encrypt" or "decrypt"</param>
+        /// <param name="ch">The character that needs to be encrypted/decrypted</param>
+        /// <param name="key">The numeric key defining the number of shifts to perform</param>
+        /// <returns></returns>
         private char Cipher(string direction, char ch, int key)
         {
             char returnValue = ' ';
 
-            if (!char.IsLetter(ch))
-            {
-                returnValue = ch;
+            if (!char.IsLetter(ch))                             // If the supplied character is anything
+            {                                                       // other than a letter, return
+                returnValue = ch;                                   // without change
             }
             else
             {
-                char d = char.IsUpper(ch) ? 'A' : 'a';
+                char d = char.IsUpper(ch) ? 'A' : 'a';          // Determine if the character is upper or lower case
 
-                returnValue = (char)((((ch + key) - d) % 26) + d);
+                returnValue = (char)((((ch + key) - d) % 26) + d); // Calculate the encrypted value
             }
 
             return returnValue;
         }
 
+        /// <summary>
+        /// Calls for encryption or decryption depending on passed parameters
+        /// </summary>
+        /// <param name="direction">Define if we want to "encrypt" or "decrypt"</param>
+        /// <param name="ch">The character that needs to be encrypted/decrypted</param>
+        /// <param name="key">The numeric key defining the number of shifts to perform</param>
+        /// <returns></returns>
         private string Cryptograph(string action, string input, int key)
         {
             string returnValue = String.Empty;
@@ -92,26 +110,29 @@ namespace UIFromHell
             return returnValue;
         }
 
+        /// <summary>
+        /// Update the display with second set of controls when first challenge was completed
+        /// </summary>
         private void UpdateDisplaySecondPhase()
         {
             Form2StateEncryptionLbl.Enabled = true;
             Form2StateEncryptionLbl.Visible = true;
 
-            Form2ExamplePlainLbl1.Text = "ABC";
+            Form2ExamplePlainLbl1.Text = "ABC";                                 // Provides a hint to the player
             Form2ExampleEncryptedLbl1.Text = Cryptograph(
                                                     "encipher", 
                                                     Form2ExamplePlainLbl1.Text,
                                                     encryptionShiftBy
                                                 );
 
-            Form2ExamplePlainLbl2.Text = "GIK";
+            Form2ExamplePlainLbl2.Text = "GIK";                                 // Provides a hint to the player
             Form2ExampleEncryptedLbl2.Text = Cryptograph(
                                                     "encipher",
                                                     Form2ExamplePlainLbl2.Text,
                                                     encryptionShiftBy
                                                 );
 
-            Form2ExamplePlainLbl1.Enabled = true;
+            Form2ExamplePlainLbl1.Enabled = true;                   // Enable form elements for second phase
             Form2ExamplePlainLbl1.Visible = true;
             Form2ExampleEncryptedLbl1.Enabled = true;
             Form2ExampleEncryptedLbl1.Visible = true;
@@ -128,6 +149,11 @@ namespace UIFromHell
             Form2EncryptedNameTxtB.Visible = true;
         }
 
+        /// <summary>
+        /// Read input from text box and passes value to validator
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void Form2EncryptedNameTxtB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
@@ -139,6 +165,10 @@ namespace UIFromHell
             }            
         }
 
+        /// <summary>
+        /// Determine if the value entered by the user matches the calculated value
+        /// </summary>
+        /// <returns></returns>
         private bool IsCorrectValue()
         {
             bool returnValue = false;
@@ -150,6 +180,9 @@ namespace UIFromHell
             return returnValue;
         }
 
+        /// <summary>
+        /// Display last elements for the second form
+        /// </summary>
         private void DisplayLastElements()
         {
             Form2AskEncryptionTypeLbl.Enabled = true;
@@ -158,16 +191,16 @@ namespace UIFromHell
             Form2DirectionLbl.Enabled = true;
             Form2DirectionLbl.Visible = true;
 
-            Form2DirectionCmbB.Items.Add("left");
-            Form2DirectionCmbB.Items.Add("right");
-
-            Form2DirectionCmbB.Enabled = true;
+            Form2DirectionCmbB.Items.Add("left");   // Populate combo box with left and right
+            Form2DirectionCmbB.Items.Add("right");      // so the user can indicate if it was a
+                                                        // left or right cipher.  Left is not implemented, 
+            Form2DirectionCmbB.Enabled = true;          // but the user doesn't know that.
             Form2DirectionCmbB.Visible = true;
 
             for (int i = 0; i < 27; i++)
             {
-                Form2QtyCmbB.Items.Add(i);
-            }
+                Form2QtyCmbB.Items.Add(i);          // Populate combo box with numbers 0 to 26
+            }                                           // so user can enter the shift quantity
 
             Form2QtyLbl.Enabled = true;
             Form2QtyLbl.Visible = true;
@@ -178,24 +211,29 @@ namespace UIFromHell
             Form2CaeserSubmitBtn.Enabled = true;
             Form2CaeserSubmitBtn.Visible = true;
         }
-        
+
+        /// <summary>
+        /// Read the values from the combo boxes and evaluate
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void Form2CaeserSubmitBtn_Click(object sender, EventArgs e)
         {
             if ((Form2DirectionCmbB.Text.Equals(encryptionShiftDirection)) &&
                     ((Form2QtyCmbB.Text.Equals(encryptionShiftBy.ToString()))))
-            {
-                this.Hide();
+            {                                                           // If the answers are correct
+                this.Hide();                                            // hide form 2
 
-                Form3 form3 = new Form3();
+                Form3 form3 = new Form3();                              // open form 3
                 DialogResult form3Result = form3.ShowDialog(this);
 
-                this.Show();
-                this.Close();
+                this.Show();                                            // When form 3 closes, show this form
+                this.Close();                                           // and then close it
             }
             else
             {
-                MessageBox.Show(
-                owner: this,
+                MessageBox.Show(                                        // If the answers are incorrect, inform
+                owner: this,                                                // the user
                 text: "Sorry, that is wrong",
                 caption: "You made a Boo-boo",
                 buttons: MessageBoxButtons.OK
