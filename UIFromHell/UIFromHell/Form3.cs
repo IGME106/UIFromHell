@@ -20,18 +20,34 @@ namespace UIFromHell
             InitializeComponent();            
         }
 
+        /// <summary>
+        /// Monitor radio buttons for change in state
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Form3GroupBox2.Enabled = true;
         }
 
+        /// <summary>
+        /// When button is pressed to submit, test values
+        /// 
+        /// Correct values are Form3Question1RadioBtn3 and Form3Question2RadioBtn1
+        /// but if the user admits they don't know the answer, they get bonus credit
+        /// and are allowed to pass
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void Form3SubmitBtn1_Click(object sender, EventArgs e)
         {
+            // Test that the buttons are not in their default location
             if ((RadioButton1.Checked == true) || (RadioButton2.Checked == true))
             {
                 DisplayMessage("noneSelected");
             }
 
+            // Test for winning combination and provide feedback based on selections
             if ((Form3Question1RadioBtn3.Checked == true) && (Form3Question2RadioBtn1.Checked == true))
             {
                 DisplayMessage("correctAnswer");
@@ -52,12 +68,16 @@ namespace UIFromHell
             }
         }
 
+        /// <summary>
+        /// Display a message box with a predefined message
+        /// </summary>
+        /// <param name="optionString">The type of message requested</param>
         private void DisplayMessage(string optionString)
         {
             string message = String.Empty;
             string heading = String.Empty;
 
-            switch (optionString)
+            switch (optionString)       // optionString is the type of message requested
             {
                 case "noneSelected":
                     message = "You have not made a valid selection";
@@ -85,7 +105,7 @@ namespace UIFromHell
                     break;
             }
 
-            MessageBox.Show(
+            MessageBox.Show(        // Show the message box with predefined parameters
                 owner: this,
                 text: message,
                 caption: heading,
@@ -94,10 +114,15 @@ namespace UIFromHell
 
             if ((optionString.Equals("correctAnswer")) || (optionString.Equals("almostCorrect")))
             {
-                this.Close();
+                this.Close();       // If the answer is accepted, close the forms
             }
         }
 
+        /// <summary>
+        /// Monitor for change in radio button 2 status
+        /// </summary>
+        /// <param name="sender">Object calling the event</param>
+        /// <param name="e">Arguments passed by the event</param>
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             Form3SubmitBtn1.Enabled = true;
