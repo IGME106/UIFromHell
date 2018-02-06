@@ -1,4 +1,14 @@
-﻿namespace UIFromHell
+﻿/// <summary>
+/// IGME-106 - Game Development and Algorithmic Problem Solving
+/// Homework 1 - UI From Hell
+/// Class Description   : Second class and second form for the UI from hell
+/// Author              : Benjamin Kleynhans
+/// Modified By         : Benjamin Kleynhans
+/// Date                : February 6, 2018
+/// Filename            : Form2.Designer.cs
+/// </summary>
+
+namespace UIFromHell
 {
     partial class Form2
     {

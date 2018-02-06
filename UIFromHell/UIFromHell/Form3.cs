@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+/// <summary>
+/// IGME-106 - Game Development and Algorithmic Problem Solving
+/// Homework 1 - UI From Hell
+/// Class Description   : Third class and third form for the UI from hell
+/// Author              : Benjamin Kleynhans
+/// Modified By         : Benjamin Kleynhans
+/// Date                : February 6, 2018
+/// Filename            : Form3.cs
+/// </summary>
 
 namespace UIFromHell
 {
@@ -36,11 +39,16 @@ namespace UIFromHell
             else if (
                         (((Form3Question1RadioBtn1.Checked == true) || (Form3Question1RadioBtn2.Checked == true)) && 
                         (Form3Question2RadioBtn1.Checked == true)
-               ) || (
+                    ) || (
                         (Form3Question1RadioBtn3.Checked == true) && (Form3Question2RadioBtn2.Checked == true))                        
-               )
+                    )
             {
                 DisplayMessage("incorrectAnswer");
+            }
+            else if (((Form3Question1RadioBtn1.Checked == true) || (Form3Question1RadioBtn2.Checked == true)) &&
+                        (Form3Question2RadioBtn2.Checked == true))
+            {
+                DisplayMessage("almostCorrect");
             }
         }
 
@@ -66,6 +74,13 @@ namespace UIFromHell
                     heading = "YOU WON!!!";
 
                     break;
+                case "almostCorrect":
+                    message = "Congratulations, you won the game (kind of)...\n\n" +
+                        "You had the answer wrong, but you admitted you didn't know\n" +
+                        "so I'll let it pass";
+                    heading = "YOU WON!!!";
+
+                    break;
                 default:
                     break;
             }
@@ -77,7 +92,7 @@ namespace UIFromHell
                 buttons: MessageBoxButtons.OK
             );
 
-            if (optionString.Equals("correctAnswer"))
+            if ((optionString.Equals("correctAnswer")) || (optionString.Equals("almostCorrect")))
             {
                 this.Close();
             }
