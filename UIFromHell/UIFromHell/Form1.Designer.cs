@@ -64,9 +64,9 @@ namespace UIFromHell
             // 
             this.Form1Panel1.Controls.Add(this.Form1PanelLeftEntry);
             this.Form1Panel1.Controls.Add(this.Form1PanelBottomEntry);
-            this.Form1Panel1.Controls.Add(this.Form1PanelRightEntry);
             this.Form1Panel1.Controls.Add(this.Form1PanelTopEntry);
             this.Form1Panel1.Controls.Add(this.Form1BtnNext);
+            this.Form1Panel1.Controls.Add(this.Form1PanelRightEntry);
             this.Form1Panel1.Location = new System.Drawing.Point(30, 68);
             this.Form1Panel1.Name = "Form1Panel1";
             this.Form1Panel1.Size = new System.Drawing.Size(197, 86);

@@ -30,7 +30,7 @@ namespace UIFromHell
         }
 
         /// <summary>
-        /// Takes input from the textbox
+        /// Takes input from the text box
         /// </summary>
         /// <param name="sender">Object calling the event</param>
         /// <param name="e">Arguments passed by the event</param>

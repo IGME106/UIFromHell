@@ -116,7 +116,7 @@ namespace UIFromHell
             this.Form1Panel1.Location = new Point(30, 60 + labelHeight);    // Define starting point for panel
             this.Form1Panel1.Size = new Size(paneWidth, paneHeight);
 
-            int buttonWidth = labelWidth;                               // Set parameters for button
+            int buttonWidth = labelWidth - 40;                               // Set parameters for button
             int buttonHeight = labelHeight;
             this.Form1BtnNext.Location = new Point(20, 20);             // Define starting point for button
             this.Form1BtnNext.Size = new Size(buttonWidth, buttonHeight);
