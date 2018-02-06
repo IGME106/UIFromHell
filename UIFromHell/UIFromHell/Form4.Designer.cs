@@ -1,6 +1,6 @@
 ﻿namespace UIFromHell
 {
-    partial class Frm4
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Frm4
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "Frm4";
+            this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);
 

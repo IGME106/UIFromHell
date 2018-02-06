@@ -1,6 +1,6 @@
 ﻿namespace UIFromHell
 {
-    partial class Frm3
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@
             this.radioButton4.Text = "radioButton4";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // Frm3
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButton1);
-            this.Name = "Frm3";
+            this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();

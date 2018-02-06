@@ -1,6 +1,6 @@
 ﻿namespace UIFromHell
 {
-    partial class Frm1
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,95 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Frm1NextBtn = new System.Windows.Forms.Button();
-            this.Frm1BtnRightEntry = new System.Windows.Forms.Button();
-            this.Frm1BtnBottomEntry = new System.Windows.Forms.Button();
-            this.Frm1BtnLeftEntry = new System.Windows.Forms.Button();
-            this.Frm1BtnTopEntry = new System.Windows.Forms.Button();
-            this.Frm1Lbl1 = new System.Windows.Forms.Label();
+            this.Form1Lbl1 = new System.Windows.Forms.Label();
+            this.Form1Panel1 = new System.Windows.Forms.Panel();
+            this.Form1PanelLeftEntry = new System.Windows.Forms.Panel();
+            this.Form1PanelBottomEntry = new System.Windows.Forms.Panel();
+            this.Form1PanelRightEntry = new System.Windows.Forms.Panel();
+            this.Form1PanelTopEntry = new System.Windows.Forms.Panel();
+            this.Form1BtnNext = new System.Windows.Forms.Button();
+            this.Form1CmbB1 = new System.Windows.Forms.ComboBox();
+            this.Form1Lbl2 = new System.Windows.Forms.Label();
+            this.Form1Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Frm1NextBtn
+            // Form1Lbl1
             // 
-            this.Frm1NextBtn.Location = new System.Drawing.Point(90, 99);
-            this.Frm1NextBtn.Name = "Frm1NextBtn";
-            this.Frm1NextBtn.Size = new System.Drawing.Size(75, 23);
-            this.Frm1NextBtn.TabIndex = 0;
-            this.Frm1NextBtn.Text = "button1";
-            this.Frm1NextBtn.UseVisualStyleBackColor = true;
-            this.Frm1NextBtn.Click += new System.EventHandler(this.button1_Click);
+            this.Form1Lbl1.AutoSize = true;
+            this.Form1Lbl1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Form1Lbl1.Location = new System.Drawing.Point(25, 23);
+            this.Form1Lbl1.Name = "Form1Lbl1";
+            this.Form1Lbl1.Size = new System.Drawing.Size(64, 28);
+            this.Form1Lbl1.TabIndex = 6;
+            this.Form1Lbl1.Text = "label1";
             // 
-            // Frm1BtnRightEntry
+            // Form1Panel1
             // 
-            this.Frm1BtnRightEntry.Location = new System.Drawing.Point(171, 99);
-            this.Frm1BtnRightEntry.Name = "Frm1BtnRightEntry";
-            this.Frm1BtnRightEntry.Size = new System.Drawing.Size(75, 23);
-            this.Frm1BtnRightEntry.TabIndex = 1;
-            this.Frm1BtnRightEntry.Text = "button2";
-            this.Frm1BtnRightEntry.UseVisualStyleBackColor = true;
+            this.Form1Panel1.Controls.Add(this.Form1PanelLeftEntry);
+            this.Form1Panel1.Controls.Add(this.Form1PanelBottomEntry);
+            this.Form1Panel1.Controls.Add(this.Form1PanelRightEntry);
+            this.Form1Panel1.Controls.Add(this.Form1PanelTopEntry);
+            this.Form1Panel1.Controls.Add(this.Form1BtnNext);
+            this.Form1Panel1.Location = new System.Drawing.Point(30, 68);
+            this.Form1Panel1.Name = "Form1Panel1";
+            this.Form1Panel1.Size = new System.Drawing.Size(197, 86);
+            this.Form1Panel1.TabIndex = 7;
             // 
-            // Frm1BtnBottomEntry
+            // Form1PanelLeftEntry
             // 
-            this.Frm1BtnBottomEntry.Location = new System.Drawing.Point(90, 128);
-            this.Frm1BtnBottomEntry.Name = "Frm1BtnBottomEntry";
-            this.Frm1BtnBottomEntry.Size = new System.Drawing.Size(75, 23);
-            this.Frm1BtnBottomEntry.TabIndex = 2;
-            this.Frm1BtnBottomEntry.Text = "button3";
-            this.Frm1BtnBottomEntry.UseVisualStyleBackColor = true;
+            this.Form1PanelLeftEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Form1PanelLeftEntry.Location = new System.Drawing.Point(22, 26);
+            this.Form1PanelLeftEntry.Name = "Form1PanelLeftEntry";
+            this.Form1PanelLeftEntry.Size = new System.Drawing.Size(67, 10);
+            this.Form1PanelLeftEntry.TabIndex = 7;
+            this.Form1PanelLeftEntry.MouseEnter += new System.EventHandler(this.Form1PanelLeftEntry_MouseEnter);
             // 
-            // Frm1BtnLeftEntry
+            // Form1PanelBottomEntry
             // 
-            this.Frm1BtnLeftEntry.Location = new System.Drawing.Point(12, 99);
-            this.Frm1BtnLeftEntry.Name = "Frm1BtnLeftEntry";
-            this.Frm1BtnLeftEntry.Size = new System.Drawing.Size(75, 23);
-            this.Frm1BtnLeftEntry.TabIndex = 3;
-            this.Frm1BtnLeftEntry.Text = "button4";
-            this.Frm1BtnLeftEntry.UseVisualStyleBackColor = true;
+            this.Form1PanelBottomEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Form1PanelBottomEntry.Location = new System.Drawing.Point(22, 42);
+            this.Form1PanelBottomEntry.Name = "Form1PanelBottomEntry";
+            this.Form1PanelBottomEntry.Size = new System.Drawing.Size(67, 10);
+            this.Form1PanelBottomEntry.TabIndex = 7;
+            this.Form1PanelBottomEntry.MouseEnter += new System.EventHandler(this.Form1PanelBottomEntry_MouseEnter);
             // 
-            // Frm1BtnTopEntry
+            // Form1PanelRightEntry
             // 
-            this.Frm1BtnTopEntry.Location = new System.Drawing.Point(90, 70);
-            this.Frm1BtnTopEntry.Name = "Frm1BtnTopEntry";
-            this.Frm1BtnTopEntry.Size = new System.Drawing.Size(75, 23);
-            this.Frm1BtnTopEntry.TabIndex = 4;
-            this.Frm1BtnTopEntry.Text = "button5";
-            this.Frm1BtnTopEntry.UseVisualStyleBackColor = true;
+            this.Form1PanelRightEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Form1PanelRightEntry.Location = new System.Drawing.Point(22, 58);
+            this.Form1PanelRightEntry.Name = "Form1PanelRightEntry";
+            this.Form1PanelRightEntry.Size = new System.Drawing.Size(67, 10);
+            this.Form1PanelRightEntry.TabIndex = 7;
+            this.Form1PanelRightEntry.MouseEnter += new System.EventHandler(this.Form1PanelRightEntry_MouseEnter);
             // 
-            // Frm1Lbl1
+            // Form1PanelTopEntry
             // 
-            this.Frm1Lbl1.AutoSize = true;
-            this.Frm1Lbl1.Location = new System.Drawing.Point(12, 9);
-            this.Frm1Lbl1.Name = "Frm1Lbl1";
-            this.Frm1Lbl1.Size = new System.Drawing.Size(46, 17);
-            this.Frm1Lbl1.TabIndex = 6;
-            this.Frm1Lbl1.Text = "label1";
+            this.Form1PanelTopEntry.BackColor = System.Drawing.SystemColors.Control;
+            this.Form1PanelTopEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Form1PanelTopEntry.Location = new System.Drawing.Point(22, 10);
+            this.Form1PanelTopEntry.Name = "Form1PanelTopEntry";
+            this.Form1PanelTopEntry.Size = new System.Drawing.Size(67, 10);
+            this.Form1PanelTopEntry.TabIndex = 6;
+            this.Form1PanelTopEntry.MouseEnter += new System.EventHandler(this.Form1PanelTopEntry_MouseEnter);
             // 
-            // Frm1
+            // Form1BtnNext
+            // 
+            this.Form1BtnNext.Enabled = false;
+            this.Form1BtnNext.Location = new System.Drawing.Point(117, 10);
+            this.Form1BtnNext.Margin = new System.Windows.Forms.Padding(0);
+            this.Form1BtnNext.Name = "Form1BtnNext";
+            this.Form1BtnNext.Size = new System.Drawing.Size(68, 29);
+            this.Form1BtnNext.TabIndex = 5;
+            this.Form1BtnNext.UseVisualStyleBackColor = true;
+            this.Form1BtnNext.Click += new System.EventHandler(this.Form1BtnNext_Click);
+            // 
+            // Form1CmbB1
+            // 
+            this.Form1CmbB1.FormattingEnabled = true;
+            this.Form1CmbB1.Location = new System.Drawing.Point(123, 186);
+            this.Form1CmbB1.Name = "Form1CmbB1";
+            this.Form1CmbB1.Size = new System.Drawing.Size(121, 24);
+            this.Form1CmbB1.TabIndex = 8;
+            // 
+            // Form1Lbl2
+            // 
+            this.Form1Lbl2.AutoSize = true;
+            this.Form1Lbl2.Location = new System.Drawing.Point(27, 186);
+            this.Form1Lbl2.Name = "Form1Lbl2";
+            this.Form1Lbl2.Size = new System.Drawing.Size(46, 17);
+            this.Form1Lbl2.TabIndex = 9;
+            this.Form1Lbl2.Text = "label1";
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 253);
-            this.Controls.Add(this.Frm1Lbl1);
-            this.Controls.Add(this.Frm1BtnTopEntry);
-            this.Controls.Add(this.Frm1BtnLeftEntry);
-            this.Controls.Add(this.Frm1BtnBottomEntry);
-            this.Controls.Add(this.Frm1BtnRightEntry);
-            this.Controls.Add(this.Frm1NextBtn);
-            this.Name = "Frm1";
+            this.ClientSize = new System.Drawing.Size(319, 263);
+            this.Controls.Add(this.Form1Lbl2);
+            this.Controls.Add(this.Form1CmbB1);
+            this.Controls.Add(this.Form1Panel1);
+            this.Controls.Add(this.Form1Lbl1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Form1Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Frm1NextBtn;
-        private System.Windows.Forms.Button Frm1BtnRightEntry;
-        private System.Windows.Forms.Button Frm1BtnBottomEntry;
-        private System.Windows.Forms.Button Frm1BtnLeftEntry;
-        private System.Windows.Forms.Button Frm1BtnTopEntry;
-        private System.Windows.Forms.Label Frm1Lbl1;
+        private System.Windows.Forms.Label Form1Lbl1;
+        private System.Windows.Forms.Panel Form1Panel1;
+        private System.Windows.Forms.Button Form1BtnNext;
+        private System.Windows.Forms.Panel Form1PanelLeftEntry;
+        private System.Windows.Forms.Panel Form1PanelBottomEntry;
+        private System.Windows.Forms.Panel Form1PanelRightEntry;
+        private System.Windows.Forms.Panel Form1PanelTopEntry;
+        private System.Windows.Forms.ComboBox Form1CmbB1;
+        private System.Windows.Forms.Label Form1Lbl2;
     }
 }
 

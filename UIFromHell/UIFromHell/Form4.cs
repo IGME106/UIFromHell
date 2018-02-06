@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UIFromHell
 {
-    public partial class Frm4 : Form
+    public partial class Form4 : Form
     {
-        public Frm4()
+        public Form4()
         {
             InitializeComponent();
         }

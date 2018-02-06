@@ -1,6 +1,6 @@
 ﻿namespace UIFromHell
 {
-    partial class Frm2
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Frm1CmbB1 = new System.Windows.Forms.ComboBox();
+            this.Form1CmbB1 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -118,13 +118,13 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "label7";
             // 
-            // Frm1CmbB1
+            // Form1CmbB1
             // 
-            this.Frm1CmbB1.FormattingEnabled = true;
-            this.Frm1CmbB1.Location = new System.Drawing.Point(21, 269);
-            this.Frm1CmbB1.Name = "Frm1CmbB1";
-            this.Frm1CmbB1.Size = new System.Drawing.Size(121, 24);
-            this.Frm1CmbB1.TabIndex = 9;
+            this.Form1CmbB1.FormattingEnabled = true;
+            this.Form1CmbB1.Location = new System.Drawing.Point(21, 269);
+            this.Form1CmbB1.Name = "Form1CmbB1";
+            this.Form1CmbB1.Size = new System.Drawing.Size(121, 24);
+            this.Form1CmbB1.TabIndex = 9;
             // 
             // comboBox1
             // 
@@ -134,13 +134,13 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 10;
             // 
-            // Frm2
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 340);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.Frm1CmbB1);
+            this.Controls.Add(this.Form1CmbB1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -150,7 +150,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Frm2";
+            this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,7 +168,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Frm1CmbB1;
+        private System.Windows.Forms.ComboBox Form1CmbB1;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
