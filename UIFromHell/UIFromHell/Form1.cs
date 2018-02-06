@@ -345,6 +345,7 @@ namespace UIFromHell
                 DialogResult form2Result = form2.ShowDialog(this);
 
                 this.Show();
+                this.Close();
             }            
         }
     }

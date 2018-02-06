@@ -28,101 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.Form3Label1 = new System.Windows.Forms.Label();
+            this.Form3SubmitBtn1 = new System.Windows.Forms.Button();
+            this.Form3GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.RadioButton1 = new System.Windows.Forms.RadioButton();
+            this.Form3Question1RadioBtn2 = new System.Windows.Forms.RadioButton();
+            this.Form3Question1RadioBtn1 = new System.Windows.Forms.RadioButton();
+            this.Form3GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.RadioButton2 = new System.Windows.Forms.RadioButton();
+            this.Form3Question2RadioBtn2 = new System.Windows.Forms.RadioButton();
+            this.Form3Question2RadioBtn1 = new System.Windows.Forms.RadioButton();
+            this.Form3Question1RadioBtn3 = new System.Windows.Forms.RadioButton();
+            this.Form3GroupBox1.SuspendLayout();
+            this.Form3GroupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Form3Label1
+            // 
+            this.Form3Label1.Location = new System.Drawing.Point(23, 22);
+            this.Form3Label1.Name = "Form3Label1";
+            this.Form3Label1.Size = new System.Drawing.Size(247, 41);
+            this.Form3Label1.TabIndex = 1;
+            // 
+            // Form3SubmitBtn1
+            // 
+            this.Form3SubmitBtn1.Enabled = false;
+            this.Form3SubmitBtn1.Location = new System.Drawing.Point(26, 344);
+            this.Form3SubmitBtn1.Name = "Form3SubmitBtn1";
+            this.Form3SubmitBtn1.Size = new System.Drawing.Size(244, 23);
+            this.Form3SubmitBtn1.TabIndex = 6;
+            this.Form3SubmitBtn1.Text = "Submit";
+            this.Form3SubmitBtn1.UseVisualStyleBackColor = true;
+            this.Form3SubmitBtn1.Click += new System.EventHandler(this.Form3SubmitBtn1_Click);
+            // 
+            // Form3GroupBox1
+            // 
+            this.Form3GroupBox1.Controls.Add(this.Form3Question1RadioBtn3);
+            this.Form3GroupBox1.Controls.Add(this.RadioButton1);
+            this.Form3GroupBox1.Controls.Add(this.Form3Question1RadioBtn2);
+            this.Form3GroupBox1.Controls.Add(this.Form3Question1RadioBtn1);
+            this.Form3GroupBox1.Location = new System.Drawing.Point(26, 22);
+            this.Form3GroupBox1.Name = "Form3GroupBox1";
+            this.Form3GroupBox1.Size = new System.Drawing.Size(244, 184);
+            this.Form3GroupBox1.TabIndex = 7;
+            this.Form3GroupBox1.TabStop = false;
+            this.Form3GroupBox1.Text = "Does a pound of gold or a pound of feathers weigh more?";
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(42, 77);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadioButton1.AutoSize = true;
+            this.RadioButton1.Checked = true;
+            this.RadioButton1.Location = new System.Drawing.Point(32, 58);
+            this.RadioButton1.Name = "radioButton1";
+            this.RadioButton1.Size = new System.Drawing.Size(122, 21);
+            this.RadioButton1.TabIndex = 5;
+            this.RadioButton1.TabStop = true;
+            this.RadioButton1.Text = "None Selected";
+            this.RadioButton1.UseVisualStyleBackColor = true;
+            this.RadioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // label1
+            // Form3Question1RadioBtn2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.Form3Question1RadioBtn2.AutoSize = true;
+            this.Form3Question1RadioBtn2.Location = new System.Drawing.Point(32, 112);
+            this.Form3Question1RadioBtn2.Name = "Form3Question1RadioBtn2";
+            this.Form3Question1RadioBtn2.Size = new System.Drawing.Size(85, 21);
+            this.Form3Question1RadioBtn2.TabIndex = 4;
+            this.Form3Question1RadioBtn2.Text = "Feathers";
+            this.Form3Question1RadioBtn2.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Form3Question1RadioBtn1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(42, 105);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 21);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Form3Question1RadioBtn1.AutoSize = true;
+            this.Form3Question1RadioBtn1.Location = new System.Drawing.Point(32, 85);
+            this.Form3Question1RadioBtn1.Name = "Form3Question1RadioBtn1";
+            this.Form3Question1RadioBtn1.Size = new System.Drawing.Size(59, 21);
+            this.Form3Question1RadioBtn1.TabIndex = 3;
+            this.Form3Question1RadioBtn1.Text = "Gold";
+            this.Form3Question1RadioBtn1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // Form3GroupBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.Form3GroupBox2.Controls.Add(this.RadioButton2);
+            this.Form3GroupBox2.Controls.Add(this.Form3Question2RadioBtn2);
+            this.Form3GroupBox2.Controls.Add(this.Form3Question2RadioBtn1);
+            this.Form3GroupBox2.Enabled = false;
+            this.Form3GroupBox2.Location = new System.Drawing.Point(26, 212);
+            this.Form3GroupBox2.Name = "Form3GroupBox2";
+            this.Form3GroupBox2.Size = new System.Drawing.Size(244, 116);
+            this.Form3GroupBox2.TabIndex = 8;
+            this.Form3GroupBox2.TabStop = false;
+            this.Form3GroupBox2.Text = "Are you sure?";
             // 
-            // radioButton3
+            // RadioButton2
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(45, 188);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(110, 21);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RadioButton2.AutoSize = true;
+            this.RadioButton2.Checked = true;
+            this.RadioButton2.Location = new System.Drawing.Point(32, 29);
+            this.RadioButton2.Name = "RadioButton2";
+            this.RadioButton2.Size = new System.Drawing.Size(122, 21);
+            this.RadioButton2.TabIndex = 8;
+            this.RadioButton2.TabStop = true;
+            this.RadioButton2.Text = "None Selected";
+            this.RadioButton2.UseVisualStyleBackColor = true;
+            this.RadioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
-            // radioButton4
+            // Form3Question2RadioBtn2
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(45, 215);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(110, 21);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Form3Question2RadioBtn2.AutoSize = true;
+            this.Form3Question2RadioBtn2.Location = new System.Drawing.Point(32, 83);
+            this.Form3Question2RadioBtn2.Name = "Form3Question2RadioBtn2";
+            this.Form3Question2RadioBtn2.Size = new System.Drawing.Size(47, 21);
+            this.Form3Question2RadioBtn2.TabIndex = 7;
+            this.Form3Question2RadioBtn2.Text = "No";
+            this.Form3Question2RadioBtn2.UseVisualStyleBackColor = true;
+            // 
+            // Form3Question2RadioBtn1
+            // 
+            this.Form3Question2RadioBtn1.AutoSize = true;
+            this.Form3Question2RadioBtn1.Location = new System.Drawing.Point(32, 56);
+            this.Form3Question2RadioBtn1.Name = "Form3Question2RadioBtn1";
+            this.Form3Question2RadioBtn1.Size = new System.Drawing.Size(53, 21);
+            this.Form3Question2RadioBtn1.TabIndex = 6;
+            this.Form3Question2RadioBtn1.Text = "Yes";
+            this.Form3Question2RadioBtn1.UseVisualStyleBackColor = true;
+            // 
+            // Form3Question1RadioBtn3
+            // 
+            this.Form3Question1RadioBtn3.AutoSize = true;
+            this.Form3Question1RadioBtn3.Location = new System.Drawing.Point(32, 140);
+            this.Form3Question1RadioBtn3.Name = "Form3Question1RadioBtn3";
+            this.Form3Question1RadioBtn3.Size = new System.Drawing.Size(156, 21);
+            this.Form3Question1RadioBtn3.TabIndex = 6;
+            this.Form3Question1RadioBtn3.TabStop = true;
+            this.Form3Question1RadioBtn3.Text = "The weigh the same";
+            this.Form3Question1RadioBtn3.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton1);
+            this.ClientSize = new System.Drawing.Size(298, 386);
+            this.Controls.Add(this.Form3GroupBox2);
+            this.Controls.Add(this.Form3GroupBox1);
+            this.Controls.Add(this.Form3SubmitBtn1);
+            this.Controls.Add(this.Form3Label1);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Form3GroupBox1.ResumeLayout(false);
+            this.Form3GroupBox1.PerformLayout();
+            this.Form3GroupBox2.ResumeLayout(false);
+            this.Form3GroupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label Form3Label1;
+        private System.Windows.Forms.Button Form3SubmitBtn1;
+        private System.Windows.Forms.GroupBox Form3GroupBox1;
+        private System.Windows.Forms.RadioButton Form3Question1RadioBtn2;
+        private System.Windows.Forms.RadioButton Form3Question1RadioBtn1;
+        private System.Windows.Forms.GroupBox Form3GroupBox2;
+        private System.Windows.Forms.RadioButton Form3Question2RadioBtn2;
+        private System.Windows.Forms.RadioButton Form3Question2RadioBtn1;
+        private System.Windows.Forms.RadioButton RadioButton1;
+        private System.Windows.Forms.RadioButton RadioButton2;
+        private System.Windows.Forms.RadioButton Form3Question1RadioBtn3;
     }
 }

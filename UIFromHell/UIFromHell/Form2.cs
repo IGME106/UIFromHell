@@ -187,6 +187,7 @@ namespace UIFromHell
                 DialogResult form3Result = form3.ShowDialog(this);
 
                 this.Show();
+                this.Close();
             }
             else
             {
