@@ -36,7 +36,39 @@ namespace UIFromHell
 
         private void Form1BtnNext_Click(object sender, EventArgs e)
         {
+            DisableStep1();
+            EnableStep2();
+        }
 
+        private void DisableStep1()
+        {
+            ResetLocks("reset");
+            Form1Panel1.Visible = false;
+            Form1Panel1.Enabled = false;
+
+            Form1Lbl1.Visible = false;
+            Form1Lbl1.Enabled = false;
+        }
+
+        private void EnableStep2()
+        {
+            this.Form1Lbl2.Enabled = true;
+            this.Form1Lbl2.Visible = true;
+
+            this.Form1CmbB1.Enabled = true;
+            this.Form1CmbB1.Visible = true;
+
+            this.Size = new Size(600, 150);
+
+            this.Form1Lbl2.Text = "What is code and section of this course?";
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    this.Form1CmbB1.Items.Add("IGME.10" + i + ".0" + j);
+                }
+            }
         }
 
         private void SetDisplaySize()
@@ -61,16 +93,15 @@ namespace UIFromHell
 
             SetBorderButtons(paneWidth, paneHeight);
 
-            int comboBoxLblWidth = 100;
+            int comboBoxLblWidth = 300;
             int comboBoxLblHeight = 20;
-            this.Form1Lbl2.Location = new Point(20, labelHeight + paneHeight + mouseHoverObjectHeight + 60);
+            this.Form1Lbl2.Location = new Point(25, 25);
             this.Form1Lbl2.Size = new Size(comboBoxLblWidth, comboBoxLblHeight);
 
             int comboBoxWidth = 100;
             int comboBoxHeight = 20;
-            this.Form1CmbB1.Location = new Point(60, labelHeight + paneHeight + mouseHoverObjectHeight + 60);
+            this.Form1CmbB1.Location = new Point(comboBoxLblWidth + 100, 25);
             this.Form1CmbB1.Size = new Size(comboBoxWidth, comboBoxHeight);
-
 
             this.Size = new Size(labelWidth + 70, (labelHeight + paneHeight + mouseHoverObjectHeight + 85));
         }
@@ -143,7 +174,7 @@ namespace UIFromHell
                         this.Form1PanelTopEntry.BackColor = Color.Green;
                     } else
                     {
-                        ResetLocks();
+                        ResetLocks("error");
                     }
 
                     break;
@@ -175,7 +206,7 @@ namespace UIFromHell
                     }
                     else
                     {
-                        ResetLocks();
+                        ResetLocks("error");
                     }
 
                     break;
@@ -207,7 +238,7 @@ namespace UIFromHell
                     }
                     else
                     {
-                        ResetLocks();
+                        ResetLocks("error");
                     }
 
                     break;
@@ -239,7 +270,7 @@ namespace UIFromHell
                     }
                     else
                     {
-                        ResetLocks();
+                        ResetLocks("error");
                     }
 
                     break;
@@ -271,8 +302,18 @@ namespace UIFromHell
             }
         }
 
-        private void ResetLocks()
+        private void ResetLocks(string why)
         {
+            if (why.Equals("error"))
+            {
+                MessageBox.Show(
+                owner: this,
+                text: "Wrong order, try again",
+                caption: "You made a Boo-boo",
+                buttons: MessageBoxButtons.OK
+                );
+            }
+
             TopEntry = false;
             TopExit = false;
             LeftEntry = false;
@@ -287,8 +328,24 @@ namespace UIFromHell
             this.Form1PanelBottomEntry.BackColor = SystemColors.Control;
             this.Form1PanelRightEntry.BackColor = SystemColors.Control;
 
+            this.Form1BtnNext.Text = "";
+
             this.Cursor = new Cursor(Cursor.Current.Handle);
             Cursor.Position = new Point(0, 0);
+        }
+
+        private void Form1CmbB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = (string)Form1CmbB1.SelectedItem;
+
+            if (selectedValue.Equals("IGME.106.02")) {
+                this.Hide();
+
+                Form2 form2 = new Form2();
+                DialogResult form2Result = form2.ShowDialog(this);
+
+                this.Show();
+            }            
         }
     }
 }

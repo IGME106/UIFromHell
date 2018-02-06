@@ -64,7 +64,6 @@
             // 
             // Form1PanelLeftEntry
             // 
-            this.Form1PanelLeftEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Form1PanelLeftEntry.Location = new System.Drawing.Point(22, 26);
             this.Form1PanelLeftEntry.Name = "Form1PanelLeftEntry";
             this.Form1PanelLeftEntry.Size = new System.Drawing.Size(67, 10);
@@ -73,7 +72,6 @@
             // 
             // Form1PanelBottomEntry
             // 
-            this.Form1PanelBottomEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Form1PanelBottomEntry.Location = new System.Drawing.Point(22, 42);
             this.Form1PanelBottomEntry.Name = "Form1PanelBottomEntry";
             this.Form1PanelBottomEntry.Size = new System.Drawing.Size(67, 10);
@@ -82,7 +80,6 @@
             // 
             // Form1PanelRightEntry
             // 
-            this.Form1PanelRightEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Form1PanelRightEntry.Location = new System.Drawing.Point(22, 58);
             this.Form1PanelRightEntry.Name = "Form1PanelRightEntry";
             this.Form1PanelRightEntry.Size = new System.Drawing.Size(67, 10);
@@ -92,7 +89,6 @@
             // Form1PanelTopEntry
             // 
             this.Form1PanelTopEntry.BackColor = System.Drawing.SystemColors.Control;
-            this.Form1PanelTopEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Form1PanelTopEntry.Location = new System.Drawing.Point(22, 10);
             this.Form1PanelTopEntry.Name = "Form1PanelTopEntry";
             this.Form1PanelTopEntry.Size = new System.Drawing.Size(67, 10);
@@ -112,30 +108,36 @@
             // 
             // Form1CmbB1
             // 
+            this.Form1CmbB1.Enabled = false;
             this.Form1CmbB1.FormattingEnabled = true;
             this.Form1CmbB1.Location = new System.Drawing.Point(123, 186);
             this.Form1CmbB1.Name = "Form1CmbB1";
             this.Form1CmbB1.Size = new System.Drawing.Size(121, 24);
             this.Form1CmbB1.TabIndex = 8;
+            this.Form1CmbB1.Visible = false;
+            this.Form1CmbB1.SelectedIndexChanged += new System.EventHandler(this.Form1CmbB1_SelectedIndexChanged);
             // 
             // Form1Lbl2
             // 
             this.Form1Lbl2.AutoSize = true;
+            this.Form1Lbl2.Enabled = false;
+            this.Form1Lbl2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Form1Lbl2.Location = new System.Drawing.Point(27, 186);
             this.Form1Lbl2.Name = "Form1Lbl2";
-            this.Form1Lbl2.Size = new System.Drawing.Size(46, 17);
+            this.Form1Lbl2.Size = new System.Drawing.Size(67, 28);
             this.Form1Lbl2.TabIndex = 9;
-            this.Form1Lbl2.Text = "label1";
+            this.Form1Lbl2.Text = "label2";
+            this.Form1Lbl2.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 263);
-            this.Controls.Add(this.Form1Lbl2);
-            this.Controls.Add(this.Form1CmbB1);
             this.Controls.Add(this.Form1Panel1);
             this.Controls.Add(this.Form1Lbl1);
+            this.Controls.Add(this.Form1Lbl2);
+            this.Controls.Add(this.Form1CmbB1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Form1Panel1.ResumeLayout(false);
