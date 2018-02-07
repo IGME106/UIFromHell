@@ -371,7 +371,10 @@ namespace UIFromHell
         /// <param name="why"></param>
         private void ResetLocks(string why)
         {
-            DisplayMessage("errorSection1");
+            if (why.Equals("error"))
+            {
+                DisplayMessage("errorSection1");
+            }   
 
             TopEntry = false;                   // Close all locks
             TopExit = false;
@@ -408,9 +411,13 @@ namespace UIFromHell
                 Form2 form2 = new Form2();              // Open Form2
                 DialogResult form2Result = form2.ShowDialog(this);
 
-                this.Show();                            // Once Form2 closes, unhide this form
+                this.Show();                            // Once Form2 closes, un-hide this form
                 this.Close();                               // and close it
-            }            
+            }
+            else
+            {
+                DisplayMessage("errorSection2");
+            }
         }
 
         /// <summary>

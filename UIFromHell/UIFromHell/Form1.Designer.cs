@@ -149,6 +149,7 @@ namespace UIFromHell
             this.Controls.Add(this.Form1Lbl2);
             this.Controls.Add(this.Form1CmbB1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Form1Panel1.ResumeLayout(false);
             this.ResumeLayout(false);

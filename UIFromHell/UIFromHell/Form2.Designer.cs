@@ -217,6 +217,7 @@ namespace UIFromHell
             this.Controls.Add(this.Form2ExamplePlainLbl1);
             this.Controls.Add(this.Form2AskPlainNameLbl);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();

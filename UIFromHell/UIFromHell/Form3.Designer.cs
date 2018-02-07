@@ -41,6 +41,7 @@ namespace UIFromHell
             this.Form3Label1 = new System.Windows.Forms.Label();
             this.Form3SubmitBtn1 = new System.Windows.Forms.Button();
             this.Form3GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.Form3Question1RadioBtn3 = new System.Windows.Forms.RadioButton();
             this.RadioButton1 = new System.Windows.Forms.RadioButton();
             this.Form3Question1RadioBtn2 = new System.Windows.Forms.RadioButton();
             this.Form3Question1RadioBtn1 = new System.Windows.Forms.RadioButton();
@@ -48,7 +49,6 @@ namespace UIFromHell
             this.RadioButton2 = new System.Windows.Forms.RadioButton();
             this.Form3Question2RadioBtn2 = new System.Windows.Forms.RadioButton();
             this.Form3Question2RadioBtn1 = new System.Windows.Forms.RadioButton();
-            this.Form3Question1RadioBtn3 = new System.Windows.Forms.RadioButton();
             this.Form3GroupBox1.SuspendLayout();
             this.Form3GroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -84,12 +84,23 @@ namespace UIFromHell
             this.Form3GroupBox1.TabStop = false;
             this.Form3GroupBox1.Text = "Does a pound of gold or a pound of feathers weigh more?";
             // 
-            // radioButton1
+            // Form3Question1RadioBtn3
+            // 
+            this.Form3Question1RadioBtn3.AutoSize = true;
+            this.Form3Question1RadioBtn3.Location = new System.Drawing.Point(32, 140);
+            this.Form3Question1RadioBtn3.Name = "Form3Question1RadioBtn3";
+            this.Form3Question1RadioBtn3.Size = new System.Drawing.Size(156, 21);
+            this.Form3Question1RadioBtn3.TabIndex = 6;
+            this.Form3Question1RadioBtn3.TabStop = true;
+            this.Form3Question1RadioBtn3.Text = "The weigh the same";
+            this.Form3Question1RadioBtn3.UseVisualStyleBackColor = true;
+            // 
+            // RadioButton1
             // 
             this.RadioButton1.AutoSize = true;
             this.RadioButton1.Checked = true;
             this.RadioButton1.Location = new System.Drawing.Point(32, 58);
-            this.RadioButton1.Name = "radioButton1";
+            this.RadioButton1.Name = "RadioButton1";
             this.RadioButton1.Size = new System.Drawing.Size(122, 21);
             this.RadioButton1.TabIndex = 5;
             this.RadioButton1.TabStop = true;
@@ -163,17 +174,6 @@ namespace UIFromHell
             this.Form3Question2RadioBtn1.Text = "Yes";
             this.Form3Question2RadioBtn1.UseVisualStyleBackColor = true;
             // 
-            // Form3Question1RadioBtn3
-            // 
-            this.Form3Question1RadioBtn3.AutoSize = true;
-            this.Form3Question1RadioBtn3.Location = new System.Drawing.Point(32, 140);
-            this.Form3Question1RadioBtn3.Name = "Form3Question1RadioBtn3";
-            this.Form3Question1RadioBtn3.Size = new System.Drawing.Size(156, 21);
-            this.Form3Question1RadioBtn3.TabIndex = 6;
-            this.Form3Question1RadioBtn3.TabStop = true;
-            this.Form3Question1RadioBtn3.Text = "The weigh the same";
-            this.Form3Question1RadioBtn3.UseVisualStyleBackColor = true;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,6 +184,7 @@ namespace UIFromHell
             this.Controls.Add(this.Form3SubmitBtn1);
             this.Controls.Add(this.Form3Label1);
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Form3GroupBox1.ResumeLayout(false);
             this.Form3GroupBox1.PerformLayout();
