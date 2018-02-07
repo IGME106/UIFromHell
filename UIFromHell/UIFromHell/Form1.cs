@@ -371,15 +371,7 @@ namespace UIFromHell
         /// <param name="why"></param>
         private void ResetLocks(string why)
         {
-            if (why.Equals("error"))
-            {
-                MessageBox.Show(                // Display a message stating reset
-                owner: this,
-                text: "Wrong order, try again",
-                caption: "You made a Boo-boo",
-                buttons: MessageBoxButtons.OK
-                );
-            }
+            DisplayMessage("errorSection1");
 
             TopEntry = false;                   // Close all locks
             TopExit = false;
@@ -419,6 +411,40 @@ namespace UIFromHell
                 this.Show();                            // Once Form2 closes, unhide this form
                 this.Close();                               // and close it
             }            
+        }
+
+        /// <summary>
+        /// Displays a message to the user depending on the key request
+        /// </summary>
+        /// <param name="key">Key value to define which message to display</param>
+        private void DisplayMessage(string key)
+        {
+            string message = string.Empty;
+            string heading = string.Empty;
+
+            switch (key)                    // Define message output parameters
+            {
+                case "errorSection1":
+                    message = "Wrong order, try again";
+                    heading = "You made a Boo-boo";
+
+                    break;
+                case "errorSection2":
+                    message = "The course/section combination you chose is incorrect, try again";
+                    heading = "Invalid Selection";
+
+                    break;
+                default:
+                    break;
+            }
+            
+            MessageBox.Show(                // Display a message stating reset
+                owner: this,
+                text: message,
+                caption: heading,
+                buttons: MessageBoxButtons.OK
+            );
+            
         }
     }
 }
