@@ -162,6 +162,12 @@ namespace UIFromHell
                 {
                     DisplayLastElements();
                 }
+                else
+                {
+                    Form2EncryptedNameTxtB.Text = string.Empty;
+
+                    DisplayMessage("errorSection1");
+                }
             }            
         }
 
@@ -191,17 +197,13 @@ namespace UIFromHell
             Form2DirectionLbl.Enabled = true;
             Form2DirectionLbl.Visible = true;
 
-            Form2DirectionCmbB.Items.Add("left");   // Populate combo box with left and right
-            Form2DirectionCmbB.Items.Add("right");      // so the user can indicate if it was a
-                                                        // left or right cipher.  Left is not implemented, 
-            Form2DirectionCmbB.Enabled = true;          // but the user doesn't know that.
+            PopulateForm2DirectionCmbB();
+ 
+            Form2DirectionCmbB.Enabled = true;
             Form2DirectionCmbB.Visible = true;
 
-            for (int i = 0; i < 27; i++)
-            {
-                Form2QtyCmbB.Items.Add(i);          // Populate combo box with numbers 0 to 26
-            }                                           // so user can enter the shift quantity
-
+            PopulateForm2QtyCmbB();
+            
             Form2QtyLbl.Enabled = true;
             Form2QtyLbl.Visible = true;
 
@@ -210,6 +212,26 @@ namespace UIFromHell
 
             Form2CaeserSubmitBtn.Enabled = true;
             Form2CaeserSubmitBtn.Visible = true;
+        }
+
+        /// <summary>
+        /// Populate the Form2Direction combo box
+        /// </summary>
+        private void PopulateForm2DirectionCmbB()
+        {                                               // Populate combo box with left and right
+            Form2DirectionCmbB.Items.Add("left");           // so the user can indicate if it was a
+            Form2DirectionCmbB.Items.Add("right");          // left or right cipher.  Left is not implemented,
+        }                                                   // but the user doesn't know that.
+
+        /// <summary>
+        /// Populate the Form2Qty combo box
+        /// </summary>
+        private void PopulateForm2QtyCmbB()
+        {
+            for (int i = 0; i < 27; i++)
+            {
+                Form2QtyCmbB.Items.Add(i);          // Populate combo box with numbers 0 to 26
+            }                                           // so user can enter the shift quantity
         }
 
         /// <summary>
@@ -232,13 +254,52 @@ namespace UIFromHell
             }
             else
             {
-                MessageBox.Show(                                        // If the answers are incorrect, inform
-                owner: this,                                                // the user
-                text: "Sorry, that is wrong",
-                caption: "You made a Boo-boo",
-                buttons: MessageBoxButtons.OK
-                );
+                DisplayMessage("errorSection2");
+
+                Form2DirectionCmbB.Items.Clear();
+                Form2DirectionCmbB.SelectedIndex = -1;
+                Form2DirectionCmbB.ResetText();
+                
+                Form2QtyCmbB.Items.Clear();
+                Form2QtyCmbB.SelectedIndex = -1;
+                Form2QtyCmbB.ResetText();
+
+                PopulateForm2DirectionCmbB();
+                PopulateForm2QtyCmbB();
             }
+        }
+
+        /// <summary>
+        /// Displays a message to the user depending on the key request
+        /// </summary>
+        /// <param name="key">Key value to define which message to display</param>
+        private void DisplayMessage(string key)
+        {
+            string message = string.Empty;
+            string heading = string.Empty;
+
+            switch (key)                    // Define message output parameters
+            {
+                case "errorSection1":
+                    message = "That is not the right encrypted value, please try again";
+                    heading = "Encryption is a female dog";
+
+                    break;
+                case "errorSection2":
+                    message = "Sorry, that is wrong";
+                    heading = "You made a Boo-boo";
+
+                    break;
+                default:
+                    break;
+            }
+
+            MessageBox.Show(                // Display a message stating reset
+                owner: this,
+                text: message,
+                caption: heading,
+                buttons: MessageBoxButtons.OK
+            );
         }
     }
 }

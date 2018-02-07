@@ -189,7 +189,7 @@ namespace UIFromHell
             this.Form2CaeserSubmitBtn.Enabled = false;
             this.Form2CaeserSubmitBtn.Location = new System.Drawing.Point(31, 425);
             this.Form2CaeserSubmitBtn.Name = "Form2CaeserSubmitBtn";
-            this.Form2CaeserSubmitBtn.Size = new System.Drawing.Size(313, 23);
+            this.Form2CaeserSubmitBtn.Size = new System.Drawing.Size(313, 42);
             this.Form2CaeserSubmitBtn.TabIndex = 14;
             this.Form2CaeserSubmitBtn.Text = "Submit";
             this.Form2CaeserSubmitBtn.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@ namespace UIFromHell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 474);
+            this.ClientSize = new System.Drawing.Size(380, 493);
             this.Controls.Add(this.Form2CaeserSubmitBtn);
             this.Controls.Add(this.Form2AskEncryptionTypeLbl);
             this.Controls.Add(this.Form2EncryptedNameLbl);

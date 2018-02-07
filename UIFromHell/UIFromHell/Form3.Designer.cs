@@ -65,7 +65,7 @@ namespace UIFromHell
             this.Form3SubmitBtn1.Enabled = false;
             this.Form3SubmitBtn1.Location = new System.Drawing.Point(26, 344);
             this.Form3SubmitBtn1.Name = "Form3SubmitBtn1";
-            this.Form3SubmitBtn1.Size = new System.Drawing.Size(244, 23);
+            this.Form3SubmitBtn1.Size = new System.Drawing.Size(244, 42);
             this.Form3SubmitBtn1.TabIndex = 6;
             this.Form3SubmitBtn1.Text = "Submit";
             this.Form3SubmitBtn1.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@ namespace UIFromHell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 386);
+            this.ClientSize = new System.Drawing.Size(298, 405);
             this.Controls.Add(this.Form3GroupBox2);
             this.Controls.Add(this.Form3GroupBox1);
             this.Controls.Add(this.Form3SubmitBtn1);

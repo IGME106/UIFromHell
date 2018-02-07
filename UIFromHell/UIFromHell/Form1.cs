@@ -91,6 +91,14 @@ namespace UIFromHell
 
             this.Form1Lbl2.Text = "What is code and section of this course?";
 
+            PopulateForm1CmbB1();
+        }
+
+        /// <summary>
+        /// Populate the courses combo box
+        /// </summary>
+        private void PopulateForm1CmbB1()
+        {
             for (int i = 0; i < 10; i++)        // Populate the combo box
             {
                 for (int j = 0; j < 5; j++)
@@ -417,6 +425,12 @@ namespace UIFromHell
             else
             {
                 DisplayMessage("errorSection2");
+
+                Form1CmbB1.Items.Clear();
+                Form1CmbB1.SelectedIndex = -1;
+                Form1CmbB1.ResetText();
+
+                PopulateForm1CmbB1();
             }
         }
 

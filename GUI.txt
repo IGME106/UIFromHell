@@ -1,0 +1,64 @@
+Name		: Benjamin Kleynhans
+Section		: IGME.106.02
+
+Theme		: Logic based game including some computer concepts
+
+Description
+The game consist of 3 forms with multiple subsections.  The goal of
+the program is to complete the challenges as defined on each of the 
+forms.  There are either questions or instructions on each form.
+
+The forms are design in a way where the controls are either not visible,
+not formatted or a combination of the two.  All the forms play
+with visibility and enable/disable states.  The forms each have one, two
+or three sections to complete and these sections only become available 
+once the previous objective was met.
+
+Event descriptions
+	Form1
+		The first form loads providing the user/player with a riddle.  The user/player
+		needs to move the mouse pointer across the gray section on the screen as
+		indicated by the riddle.  First from top to bottom and back again, then
+		from left to right and back again.  Once this action has been completed 
+		the gray area turns into an active button which can be clicked to continue.
+
+		Every time a successful sequence has been completed (from top to bottom and
+		back to top), green fields are shown to the user/player which indicates
+		that area of the "lock" has been opened.  If the user makes a mistake, the
+		locks are closed again and the user has to start from the beginning.
+
+		The user is provided with a message box whenever they make a "mistake"
+		
+		Once all four "locks" have been opened, the mouse cursor is moved to the
+		center of the now active button.  When the user clicks on the button
+		the form is resized and cleared to display a second question.  This is 
+		just a basic combo box containing a random list of course numbers with
+		sections.  The user/player then selects the course number and section
+		that I'm in.  (IGME.106.02)  The form automatically opens the next
+		form (Form2)
+		
+	Form2
+		The second form starts by asking for your name.  Once the name is typed and
+		you press enter a random key is generated and your name is encrypted
+		using a shift right Caeser cipher encryption algorithm.  Two examples
+		are provided of solved encryptions and then the user is asked to type
+		in his/her name in ENCRYPTED form.  To test just use the letter 'a', since
+		'a' is one of the letters in the example and the solution will be provided.
+		
+		Once the user successfully entered his/her encrypted name, another set of
+		combo boxes are displayed asking the user to specify in which direction
+		the shift was, as well as the quantity that the letters had to be shifted.
+		If the user enters the correct value, the game advances to the third form.
+		If any errors are made on the form, an appropriate messagebox is displayed.
+		
+	Form3
+		The third and final form in the game.  The game asks a simple riddle
+		and if the user answers the question correct, the game is won and it exits.
+		If however the user provides the correct answer and states they aren't sure,
+		the game does not acknowledge it as a win.  If however the user enters
+		the wrong answer and acknowledge that he/she isn't sure about the answer,
+		it is considered a win.
+		
+Stopping the form
+	You can stop/close the forms/game at any time by clicking the X in the title
+	bar.
