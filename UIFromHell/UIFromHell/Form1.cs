@@ -43,7 +43,11 @@ namespace UIFromHell
         {   
             InitializeComponent();
 
-            Form1Lbl1.Text = "To continue you must go back, \n" +       // Text of first label
+            Form1Lbl1.Text = 
+                "To advance to the next form you must\n" +              // Text of first label
+                "solve the riddle and move your mouse across the\n" +
+                "gray box as indicated.\n\n" +
+                "To continue you must go back, \n" +
                 "but to go back you must have gone forward, \n" +
                 "Before you can go forward, you must go up, \n" +
                 "but to go up you must have gone down.";
@@ -361,7 +365,9 @@ namespace UIFromHell
             {
                 this.Form1BtnNext.Enabled = true;               // Enable the button control
                 this.Form1BtnNext.Text = "Click here to Continue";
-                                                                
+
+                DisableLocks();
+
                 int nextButtonXLocation = Form1BtnNext.PointToScreen(Point.Empty).X; // Get coordinates of button on screen
                 int nextButtonYLocation = Form1BtnNext.PointToScreen(Point.Empty).Y;
 
@@ -371,6 +377,18 @@ namespace UIFromHell
                 this.Cursor = new Cursor(Cursor.Current.Handle);            // Place mouse cursor in center of button
                 Cursor.Position = new Point(nextButtonXLocation, nextButtonYLocation);
             }
+        }
+
+        /// <summary>
+        /// Disable the panel locks around the continue button
+        /// or else you can't continue.
+        /// </summary>
+        private void DisableLocks()
+        {
+            Form1PanelTopEntry.Enabled = false;
+            Form1PanelLeftEntry.Enabled = false;
+            Form1PanelBottomEntry.Enabled = false;
+            Form1PanelRightEntry.Enabled = false;
         }
 
         /// <summary>
